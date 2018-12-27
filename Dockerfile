@@ -32,6 +32,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     libgl1-mesa-dev \
     libxml2-utils \
     xsltproc \
+    lzop \
     unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
