@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
-MAINTAINER LineageOS Infrastructure Team <infra@lienageos.org>
+FROM ubuntu:14.04
+MAINTAINER jsheradin <jsheradin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Build tools
 RUN apt-get update && apt-get -y --no-install-recommends install \
-    openjdk-8-jdk \
+    openjdk-7-jdk \
     python \
     bc \
     yasm \
