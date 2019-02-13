@@ -39,16 +39,9 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
 
-
-
 # Add tools
 ADD https://commondatastorage.googleapis.com/git-repo-downloads/repo /usr/local/bin/
-ADD https://jenkins.lineageos.org/jnlpJars/slave.jar /usr/local/bin/
 RUN chmod 755 /usr/local/bin/*
-
-# Add s6-overlay
-ADD https://github.com/just-containers/s6-overlay/releases/download/v1.11.0.1/s6-overlay-amd64.tar.gz /tmp/
-RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C /
 
 # Add user
 RUN useradd lineage --home-dir=/opt/lineage && mkdir /opt/lineage
@@ -59,4 +52,4 @@ VOLUME /ccache/
 
 COPY /root /
 
-ENTRYPOINT ["/init"]
+ENTRYPOINT ["bash", "/run.sh"]

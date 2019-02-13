@@ -1,8 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-echo "Starting jenkins slave agent..."
-
-exec \
-    s6-setuidgid lineage /bin/bash -lc \
-    "java -jar /usr/local/bin/slave.jar -jnlpUrl https://jenkins.lineageos.org/computer/${NAME}/slave-agent.jnlp -secret $JENKINS_AUTH_TOKEN"
-
