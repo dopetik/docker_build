@@ -7,7 +7,8 @@ export USE_CCACHE=1
 export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx20G"
 . build/envsetup.sh
 
+make clobber
 breakfast $DEVICE
 croot
-brunch $DEVICE
+time brunch $DEVICE
 exit
