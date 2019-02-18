@@ -1,11 +1,11 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 MAINTAINER jsheradin <jsheradin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Build tools
 RUN apt-get update && apt-get -y --no-install-recommends install \
-    openjdk-7-jdk \
+    openjdk-8-jdk \
     python \
     bc \
     yasm \

@@ -1,6 +1,6 @@
 # docker_build
 
-Builds cm-11.0/lineage11 images without needing dependencies locally (namely jdk7).
+Builds jdk-8 images without needing dependencies locally.
 
 To use:
 
