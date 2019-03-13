@@ -2,7 +2,7 @@
 
 Builds jdk7 based Android ROMs (namely cm-11.0).
 
-To use (example):
+To use:
 
     docker run \
       --hostname lineage-builder \
@@ -14,4 +14,4 @@ To use (example):
 To build:
 
     cd docker_build
-    docker build -t somerepo/somename .
+    docker build -t local/lineage11builder .
