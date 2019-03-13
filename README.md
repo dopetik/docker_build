@@ -1,10 +1,15 @@
 # docker_build
 
-Builds cm-11.0/lineage11 images without needing dependencies locally (namely jdk7).
+Builds jdk7 based Android ROMs (namely cm-11.0).
 
-To use:
+To use (example):
 
-    docker run -v /example/android/:/lineage/ -v /example/ccache/:/ccache/ -e DEVICE='example' somerepo/somename
+    docker run \
+      --hostname lineage-builder \
+      -v ~/lineage11/:/lineage/ \
+      -v ~/.ccache:/ccache/ \
+      -e DEVICE='otter2' \
+      local/lineage11builder:latest
 
 To build:
 

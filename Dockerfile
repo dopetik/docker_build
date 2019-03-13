@@ -44,7 +44,9 @@ ADD https://commondatastorage.googleapis.com/git-repo-downloads/repo /usr/local/
 RUN chmod 755 /usr/local/bin/*
 
 # Add user
-RUN useradd lineage --home-dir=/opt/lineage && mkdir /opt/lineage
+RUN useradd --system --create-home --home-dir /opt/lineage --shell /bin/bash --gid root --uid 1000 --groups sudo lineage
+USER lineage
+WORKDIR /opt/lineage
 
 #Add /lineage and /ccache volumes
 VOLUME /lineage/
